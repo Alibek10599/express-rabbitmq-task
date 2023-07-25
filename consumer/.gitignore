@@ -1,2 +1,13 @@
 node_modules
-build
+build/
+dist
+
+# IDEs and editors
+.idea
+*.sln
+.vscode
+
+# misc
+*.log
+*.lock
+npm-debug.log*

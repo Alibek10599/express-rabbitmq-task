@@ -1,11 +1,11 @@
-import dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 dotenv.config();
 const PORT = process.env.PORT;
 const RABBITMQ_URL = process.env.RABBITMQ_URL || 'amqp://localhost:5672';
 
-import amqp from 'amqplib';
-import express from 'express';
-import cron from 'node-cron';
+import * as amqp from 'amqplib';
+import * as express from 'express';
+import * as cron from 'node-cron';
 
 const app = express();
 const sendQueueName = 'task_queue';
@@ -22,7 +22,7 @@ async function sendMessageToQueue(queue: string, message: string) {
     persistent: true,
   });
 
-  console.log(' [x] Sent processed task', message);
+  console.log(' [x] Sent processed task %s into processed queue.', message);
 
   await channel.close();
   await connection.close();
