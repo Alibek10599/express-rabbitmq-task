@@ -22,10 +22,18 @@ docker-compose up -d
 cd producer
 ```
 ### Установите зависимости и запустите сервис Producer
-    yarn install
+```
+yarn install
+```
+    
     yarn dev
 ### Аналогично с сервисом Consumer
-    cd consumer
-    yarn install
+```
+cd consumer
+```
+```
+yarn install
+```
+    
     yarn dev
 
